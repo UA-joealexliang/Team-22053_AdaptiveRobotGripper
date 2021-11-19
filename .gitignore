@@ -1,2 +1,4 @@
 #ignore images for now
 *.jpg
+*.jpeg
+*.png
