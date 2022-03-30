@@ -11,7 +11,7 @@ Steps to train image recognition software
 3. Gather images of product and annotate using https://roboflow.com, we want to use images oriented similar to final conveyer system under similar lighting to speed up and ensure accuracy of the AI 
 4. Export these images to yolov5 formatted zip folder
 5. Configure yolov5 files to train on our custom dataset, saving the CNN as a .pt file
-6. Export .pt file as a .onnx file for C++ deployment on Raspberry Pi
+6. Export .pt file as a .onnx file for deployment on Raspberry Pi
 
 Steps to deploy image recognition software on Raspberry Pi
 1. Install Bullseye 64-bit OS on Raspberry Pi
@@ -19,6 +19,7 @@ Steps to deploy image recognition software on Raspberry Pi
 3. scp the .onnx file over to the Raspberry Pi
 4. Run camera software and image recognition software
     The output is currently a video of the bounding box recognition on the camera input
+    Use the python command python python/yolo.py to run the program
 
 ## Object location software
 
