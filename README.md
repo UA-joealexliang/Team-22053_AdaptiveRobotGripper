@@ -1,6 +1,20 @@
 # Team-22053_AdaptiveRobotGripper
 repository to hold all software for ENGR498 Team-22053
 
+## Raspberry Pi Setup
+The Raspberry Pi is an Operating System
+You will need
+* a keyboard
+* a mouse
+* a small-HDMI compatible display
+Insert the microSD card into a SD card to USB adapter, and then plug the adapter into your computer. Download and install Raspberry Pi 64 bit Bullseye.
+https://www.raspberrypi.com/documentation/computers/getting-started.html
+The default username: pi and password: raspberry
+
+## VNC Viewer
+VNC Viewer is a great tool to remotely access the Raspberry Pi. Download it on your computer, and then connect via username/password, as well as the IP address. You can then transfer files to and from the Pi, as well as run software remotely.
+
+
 ## Object Recognition Software
 
 Object recognition software was trained using yolov5. Raspberry Pi 64-bit can only access the camera via C++, but Raspberry Pi 32-bit is unable to import certain libraries from the object recognition software, so only 64-bit can do object recognition.
@@ -20,6 +34,9 @@ Steps to deploy image recognition software on Raspberry Pi
 4. Run camera software and image recognition software
     The output is currently a video of the bounding box recognition on the camera input
     Use the python command python python/yolo.py to run the program
+    Updated yolounilever.py displays the results classifications with confidences, without the video, and takes live images
+
+https://www.raspberrypi.com/documentation/accessories/camera.html
 
 ## Object location software
 

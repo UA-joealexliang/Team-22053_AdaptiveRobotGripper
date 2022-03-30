@@ -14,9 +14,8 @@ def remove_picture(path):
 
 def take_picture():
     subprocess.run(["ls", "-l"])
-    subprocess.run(["libcamera-jpeg","-o test.jpg", "-n", "-t", "1", "--width", "640", "--height", "640"])
-#libcamera-jpeg -o test.jpg -t 2000 --width 640 --height 480
-    #subprocess.run(["libcamera-jpeg","-o test.jpg", "-t 0", "--width 640", "--height 480"])
+    subprocess.run(["libcamera-jpeg","-o test.jpg"])
+
 #read the onnx trained model
 def build_model(is_cuda):
     net = cv2.dnn.readNet("config_files/bestexp16.onnx")
@@ -153,19 +152,9 @@ def detect_img(path):
     # Wait for <> miliseconds
     cv2.waitKey()
 
-def main():
-    print("taking picture")
-    take_picture()
-    print("detecting picture...")
-    detect_img(" test.jpg")
-    print("removing picture")
-    remove_picture(" test.jpg")
-    print("program end")
-
-main()
-main()
-main()
-
+take_picture()
+detect_img(" test.jpg")
+remove_picture(" test.jpg")
 '''
 start = time.time_ns()
 frame_count = 0
